@@ -41,7 +41,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
     it('returns stellar.toml object for valid request and stellar.toml file when allowHttp is `true`', function(done) {
       this.axiosMock
         .expects('get')
-        .withArgs(sinon.match('http://acme.com/.well-known/stellar.toml'))
+        .withArgs(sinon.match('http://acme.com/kuknos.toml'))
         .returns(
           Promise.resolve({
             data: `
@@ -67,7 +67,7 @@ FEDERATION_SERVER="http://api.stellar.org/federation"
 
       this.axiosMock
         .expects('get')
-        .withArgs(sinon.match('http://acme.com/.well-known/stellar.toml'))
+        .withArgs(sinon.match('http://acme.com/kuknos.toml'))
         .returns(
           Promise.resolve({
             data: `

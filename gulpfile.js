@@ -12,13 +12,13 @@ var clear = require('clear');
 var plumber = require('gulp-plumber');
 var del = require('del');
 
-gulp.task('lint:src', function lintSrc() {
-  return gulp
-    .src(['src/**/*.ts'])
-    .pipe(plumber())
-    .pipe(plugins.tslint({ formatter: "verbose" }))
-    .pipe(plugins.tslint.report());
-});
+// gulp.task('lint:src', function lintSrc() {
+//   return gulp
+//     .src(['src/**/*.ts'])
+//     .pipe(plumber())
+//     .pipe(plugins.tslint({ formatter: "verbose" }))
+//     .pipe(plugins.tslint.report());
+// });
 
 // Lint our test code
 // gulp.task('lint:test', function lintTest() {

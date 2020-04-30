@@ -1,4 +1,4 @@
-import { Asset, AssetType } from "stellar-base";
+import { Asset, AssetType } from "js-kuknos-base";
 import { Omit } from "utility-types";
 import { Horizon } from "./horizon_api";
 

@@ -1,4 +1,4 @@
-import clone from "lodash/clone";
+import {clone} from "lodash";
 import randomBytes from "randombytes";
 import {
   Account,
@@ -8,7 +8,7 @@ import {
   TimeoutInfinite,
   Transaction,
   TransactionBuilder,
-} from "stellar-base";
+} from "js-kuknos-base";
 import { InvalidSep10ChallengeError } from "./errors";
 import { ServerApi } from "./server_api";
 

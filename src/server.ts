@@ -9,7 +9,7 @@ import {
   StrKey,
   Transaction,
   xdr,
-} from "stellar-base";
+} from "js-kuknos-base";
 import URI from "urijs";
 
 import { CallBuilder } from "./call_builder";

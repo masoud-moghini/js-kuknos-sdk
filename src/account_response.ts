@@ -1,9 +1,11 @@
 /* tslint:disable:variable-name */
 
-import {forIn} from "lodash";
-import { Account as BaseAccount } from "js-kuknos-base";
 import { Horizon } from "./horizon_api";
 import { ServerApi } from "./server_api";
+import { Account as BaseAccount } from "js-kuknos-base";
+import {forIn} from "lodash";
+
+
 
 /**
  * Do not create this object directly, use {@link Server#loadAccount}.

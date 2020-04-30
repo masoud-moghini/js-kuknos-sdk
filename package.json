@@ -20,27 +20,7 @@
     "postversion": "git push && git push --tags",
     "prettier-all": "prettier --write **/*.{js,ts}"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "prettier": "@stellar/prettier-config",
-  "lint-staged": {
-    "lib/*.{js,json}": [
-      "prettier --write",
-      "git add"
-    ],
-    "lib/*.js": [
-      "eslint --fix --max-warnings 0",
-      "git add"
-    ],
-    "**/*.ts": [
-      "prettier --write",
-      "tslint --fix",
-      "git add"
-    ]
-  },
   "keywords": [
     "stellar"
   ],

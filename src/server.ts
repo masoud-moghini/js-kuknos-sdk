@@ -1,7 +1,6 @@
 /* tslint:disable:variable-name no-namespace */
 
 import BigNumber from "bignumber.js";
-import {isEmpty,merge} from "lodash";
 import {
   Asset,
   FeeBumpTransaction,
@@ -9,6 +8,7 @@ import {
   Transaction,
   xdr,
 } from "js-kuknos-base";
+import {isEmpty,merge} from "lodash";
 import URI from "urijs";
 
 import { CallBuilder } from "./call_builder";

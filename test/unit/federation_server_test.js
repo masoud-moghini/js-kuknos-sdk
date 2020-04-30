@@ -64,7 +64,7 @@ describe("federation-server.js tests", function() {
             data: {
               stellar_address: "bob*stellar.org",
               account_id:
-                "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+                "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
             },
           }),
         );
@@ -76,7 +76,7 @@ describe("federation-server.js tests", function() {
         .then((response) => {
           expect(response.stellar_address).equals("bob*stellar.org");
           expect(response.account_id).equals(
-            "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+            "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
           done();
         })
@@ -91,7 +91,7 @@ describe("federation-server.js tests", function() {
         .then((response) => {
           expect(response.stellar_address).equals("bob*stellar.org");
           expect(response.account_id).equals(
-            "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+            "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
           done();
         })
@@ -107,7 +107,7 @@ describe("federation-server.js tests", function() {
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=id&q=GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+            "https://acme.com:1337/federation?type=id&q=GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           ),
         )
         .returns(
@@ -115,7 +115,7 @@ describe("federation-server.js tests", function() {
             data: {
               stellar_address: "bob*stellar.org",
               account_id:
-                "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+                "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
             },
           }),
         );
@@ -124,12 +124,12 @@ describe("federation-server.js tests", function() {
     it("requests is correct", function(done) {
       this.server
         .resolveAccountId(
-          "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+          "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
         )
         .then((response) => {
           expect(response.stellar_address).equals("bob*stellar.org");
           expect(response.account_id).equals(
-            "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+            "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
           done();
         })
@@ -153,7 +153,7 @@ describe("federation-server.js tests", function() {
             data: {
               stellar_address: "bob*stellar.org",
               account_id:
-                "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+                "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
             },
           }),
         );
@@ -167,7 +167,7 @@ describe("federation-server.js tests", function() {
         .then((response) => {
           expect(response.stellar_address).equals("bob*stellar.org");
           expect(response.account_id).equals(
-            "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+            "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
           done();
         })
@@ -267,7 +267,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
             data: {
               stellar_address: "bob*stellar.org",
               account_id:
-                "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+                "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
               memo_type: "id",
               memo: "100",
             },
@@ -278,7 +278,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .should.eventually.deep.equal({
           stellar_address: "bob*stellar.org",
           account_id:
-            "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+            "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           memo_type: "id",
           memo: "100",
         })
@@ -304,7 +304,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
             data: {
               stellar_address: "bob*stellar.org",
               account_id:
-                "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+                "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
               memo_type: "id",
               memo: 100,
             },
@@ -401,7 +401,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
               opts,
             )
               .resolveAccountId(
-                "GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS",
+                "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
               )
               .should.be.rejectedWith(/timeout of 1000ms exceeded/)
               .notify(done)

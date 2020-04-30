@@ -4,7 +4,7 @@ describe("federation-server.js tests", function() {
   beforeEach(function() {
     this.server = new StellarSdk.FederationServer(
       "https://acme.com:1337/federation",
-      "stellar.org",
+      "kuknos.org",
     );
     this.axiosMock = sinon.mock(axios);
     StellarSdk.Config.setDefault();
@@ -21,7 +21,7 @@ describe("federation-server.js tests", function() {
         () =>
           new StellarSdk.FederationServer(
             "http://acme.com:1337/federation",
-            "stellar.org",
+            "kuknos.org",
           ),
       ).to.throw(/Cannot connect to insecure federation server/);
     });
@@ -31,7 +31,7 @@ describe("federation-server.js tests", function() {
         () =>
           new StellarSdk.FederationServer(
             "http://acme.com:1337/federation",
-            "stellar.org",
+            "kuknos.org",
             { allowHttp: true },
           ),
       ).to.not.throw();
@@ -43,7 +43,7 @@ describe("federation-server.js tests", function() {
         () =>
           new StellarSdk.FederationServer(
             "http://acme.com:1337/federation",
-            "stellar.org",
+            "kuknos.org",
             { allowHttp: true },
           ),
       ).to.not.throw();
@@ -87,7 +87,7 @@ describe("federation-server.js tests", function() {
 
     it("requests is correct for username as stellar address", function(done) {
       this.server
-        .resolveAddress("bob")
+        .resolveAddress("masoud*kuknos.org")
         .then((response) => {
           expect(response.stellar_address).equals("masoud*kuknos.org");
           expect(response.account_id).equals(
@@ -333,7 +333,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .listen(4444, () => {
           new StellarSdk.FederationServer(
             "http://localhost:4444/federation",
-            "stellar.org",
+            "kuknos.org",
             { allowHttp: true },
           )
             .resolveAddress("masoud*kuknos.org")
@@ -375,7 +375,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           .listen(4444, () => {
             new StellarSdk.FederationServer(
               "http://localhost:4444/federation",
-              "stellar.org",
+              "kuknos.org",
               opts,
             )
               .resolveAddress("masoud*kuknos.org")
@@ -397,7 +397,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           .listen(4444, () => {
             new StellarSdk.FederationServer(
               "http://localhost:4444/federation",
-              "stellar.org",
+              "kuknos.org",
               opts,
             )
               .resolveAccountId(
@@ -421,7 +421,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           .listen(4444, () => {
             new StellarSdk.FederationServer(
               "http://localhost:4444/federation",
-              "stellar.org",
+              "kuknos.org",
               opts,
             )
               .resolveTransactionId(

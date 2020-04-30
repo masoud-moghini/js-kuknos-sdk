@@ -56,7 +56,7 @@ describe("federation-server.js tests", function() {
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=name&q=bob%2Astellar.org",
+            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.org",
           ),
         )
         .returns(
@@ -296,7 +296,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=name&q=bob%2Astellar.org",
+            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.org",
           ),
         )
         .returns(

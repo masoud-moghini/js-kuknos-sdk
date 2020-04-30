@@ -10,7 +10,6 @@ import {
 } from "js-kuknos-base";
 import {isEmpty,merge} from "lodash";
 import URI from "urijs";
-
 import { CallBuilder } from "./call_builder";
 import { Config } from "./config";
 import {

@@ -1,6 +1,5 @@
 import { InvalidSep10ChallengeError } from "./errors";
 import { ServerApi } from "./server_api";
-
 import {
   Account,
   BASE_FEE,

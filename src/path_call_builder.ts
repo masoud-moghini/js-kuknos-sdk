@@ -1,7 +1,6 @@
-import { Asset } from "js-kuknos-base";
-
 import { CallBuilder } from "./call_builder";
 import { ServerApi } from "./server_api";
+import { Asset } from "js-kuknos-base";
 
 /**
  * The Stellar Network allows payments to be made across assets through path payments. A path payment specifies a

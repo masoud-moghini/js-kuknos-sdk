@@ -1,10 +1,9 @@
-import axios from "axios";
-import { StrKey } from "js-kuknos-base";
-import URI from "urijs";
-
 import { Config } from "./config";
 import { BadResponseError } from "./errors";
 import { StellarTomlResolver } from "./stellar_toml_resolver";
+import axios from "axios";
+import { StrKey } from "js-kuknos-base";
+import URI from "urijs";
 
 // FEDERATION_RESPONSE_MAX_SIZE is the maximum size of response from a federation server
 export const FEDERATION_RESPONSE_MAX_SIZE = 100 * 1024;

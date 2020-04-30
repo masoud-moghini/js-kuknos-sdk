@@ -1,11 +1,10 @@
-import isNode from "detect-node";
-import URI from "urijs";
-import URITemplate from "urijs/src/URITemplate";
-
 import { BadRequestError, NetworkError, NotFoundError } from "./errors";
 import { Horizon } from "./horizon_api";
 import HorizonAxiosClient from "./horizon_axios_client";
 import { ServerApi } from "./server_api";
+import isNode from "detect-node";
+import URI from "urijs";
+import URITemplate from "urijs/src/URITemplate";
 
 /* tslint:disable-next-line:no-var-requires */
 const version = require("../package.json").version;

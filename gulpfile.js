@@ -67,7 +67,7 @@ gulp.task(
 gulp.task(
   'build:browser',
   gulp.parallel(
-    'lint:src',
+    //'lint:src',
     function buildBrowser() {
       return gulp
         .src('src/browser.ts')

@@ -47,7 +47,7 @@ export class StellarTomlResolver {
     const protocol = allowHttp ? "http" : "https";
 
     return axios
-      .get(`${protocol}://${domain}/.well-known/stellar.toml`, {
+      .get(`${protocol}://${domain}/kuknos.toml`, {
         maxContentLength: STELLAR_TOML_MAX_SIZE,
         cancelToken: timeout
           ? new CancelToken((cancel) =>

@@ -1,5 +1,6 @@
 import { Asset, AssetType } from "js-kuknos-base";
 import { Omit } from "utility-types";
+
 import { Horizon } from "./horizon_api";
 
 /* tslint:disable-next-line: no-namespace */

@@ -1,3 +1,6 @@
+import { InvalidSep10ChallengeError } from "./errors";
+import { ServerApi } from "./server_api";
+
 import {
   Account,
   BASE_FEE,
@@ -9,8 +12,6 @@ import {
 } from "js-kuknos-base";
 import {clone} from "lodash";
 import randomBytes from "randombytes";
-import { InvalidSep10ChallengeError } from "./errors";
-import { ServerApi } from "./server_api";
 
 /**
  * @namespace Utils

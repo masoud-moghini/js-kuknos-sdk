@@ -1,8 +1,7 @@
 /* tslint:disable:variable-name no-namespace */
 
 import BigNumber from "bignumber.js";
-import isEmpty from "lodash/isEmpty";
-import merge from "lodash/merge";
+import {isEmpty,merge} from "lodash";
 import {
   Asset,
   FeeBumpTransaction,

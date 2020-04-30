@@ -1,5 +1,3 @@
-import {clone} from "lodash";
-import randomBytes from "randombytes";
 import {
   Account,
   BASE_FEE,
@@ -9,6 +7,8 @@ import {
   Transaction,
   TransactionBuilder,
 } from "js-kuknos-base";
+import {clone} from "lodash";
+import randomBytes from "randombytes";
 import { InvalidSep10ChallengeError } from "./errors";
 import { ServerApi } from "./server_api";
 

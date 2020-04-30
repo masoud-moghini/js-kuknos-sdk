@@ -19,7 +19,7 @@ describe('stellar_toml_resolver.js tests', function() {
     it('returns stellar.toml object for valid request and stellar.toml file', function(done) {
       this.axiosMock
         .expects('get')
-        .withArgs(sinon.match('https://acme.com/.well-known/stellar.toml'))
+        .withArgs(sinon.match('https://acme.com/kuknos.toml'))
         .returns(
           Promise.resolve({
             data: `
@@ -89,7 +89,7 @@ FEDERATION_SERVER="http://api.stellar.org/federation"
     it('rejects when stellar.toml file is invalid', function(done) {
       this.axiosMock
         .expects('get')
-        .withArgs(sinon.match('https://acme.com/.well-known/stellar.toml'))
+        .withArgs(sinon.match('https://acme.com/kuknos.toml'))
         .returns(
           Promise.resolve({
             data: `
@@ -108,7 +108,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
     it('rejects when there was a connection error', function(done) {
       this.axiosMock
         .expects('get')
-        .withArgs(sinon.match('https://acme.com/.well-known/stellar.toml'))
+        .withArgs(sinon.match('https://acme.com/kuknos.toml'))
         .returns(Promise.reject());
 
       StellarSdk.StellarTomlResolver.resolve(

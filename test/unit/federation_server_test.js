@@ -181,7 +181,7 @@ describe("federation-server.js tests", function() {
     it("creates correct object", function(done) {
       this.axiosMock
         .expects("get")
-        .withArgs(sinon.match("https://acme.com/.well-known/stellar.toml"))
+        .withArgs(sinon.match("https://acme.com/kuknos.toml"))
         .returns(
           Promise.resolve({
             data: `
@@ -208,7 +208,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
     it("fails when stellar.toml does not contain federation server info", function(done) {
       this.axiosMock
         .expects("get")
-        .withArgs(sinon.match("https://acme.com/.well-known/stellar.toml"))
+        .withArgs(sinon.match("https://acme.com/kuknos.toml"))
         .returns(
           Promise.resolve({
             data: "",

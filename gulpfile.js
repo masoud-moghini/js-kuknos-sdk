@@ -179,7 +179,9 @@ gulp.task('build', gulp.series('clean', 'build:node', 'build:browser'));
 
 gulp.task(
   'test',
-  gulp.series('clean', 'test:unit', 'test:browser', function test(done) {
+  gulp.series('clean', 'test:unit', 
+  //'test:browser',
+   function test(done) {
     done();
   })
 );

@@ -1,5 +1,5 @@
 const http = require('http');
-
+/*
 describe('stellar_toml_resolver.js tests', function() {
   beforeEach(function() {
     this.axiosMock = sinon.mock(axios);
@@ -186,3 +186,4 @@ FEDERATION_SERVER="https://esb.kuknos.ir/api/directory/federation"
     });
   });
 });
+*/

@@ -187,7 +187,7 @@ describe("federation-server.js tests", function() {
             data: `
 #   The endpoint which clients should query to resolve stellar addresses
 #   for users on your domain.
-FEDERATION_SERVER="https://api.stellar.org/federation"
+FEDERATION_SERVER="https://esb.kuknos.ir/api/directory/federation"
 `,
           }),
         );
@@ -250,7 +250,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
             data: `
 #   The endpoint which clients should query to resolve stellar addresses
 #   for users on your domain.
-FEDERATION_SERVER="https://api.stellar.org/federation"
+FEDERATION_SERVER="https://esb.kuknos.ir/api/directory/federation"
 `,
           }),
         );

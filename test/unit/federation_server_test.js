@@ -259,7 +259,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://api.stellar.org/federation?type=name&q=bob%2Astellar.org",
+            "https://esb.kuknos.ir/api/directory/federation/?type=name&q=masoud%2Akuknos.org",
           ),
         )
         .returns(

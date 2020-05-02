@@ -32,7 +32,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
 
       StellarSdk.StellarTomlResolver.resolve('acme.com').then((stellarToml) => {
         expect(stellarToml.FEDERATION_SERVER).equals(
-          'https://api.stellar.org/federation'
+          'https://esb.kuknos.ir/api/directory/federation'
         );
         done();
       });
@@ -56,7 +56,7 @@ FEDERATION_SERVER="http://api.stellar.org/federation"
         allowHttp: true
       }).then((stellarToml) => {
         expect(stellarToml.FEDERATION_SERVER).equals(
-          'http://api.stellar.org/federation'
+          'https://esb.kuknos.ir/api/directory/federation'
         );
         done();
       });
@@ -80,7 +80,7 @@ FEDERATION_SERVER="http://api.stellar.org/federation"
 
       StellarSdk.StellarTomlResolver.resolve('acme.com').then((stellarToml) => {
         expect(stellarToml.FEDERATION_SERVER).equals(
-          'http://api.stellar.org/federation'
+          'https://esb.kuknos.ir/api/directory/federation'
         );
         done();
       });

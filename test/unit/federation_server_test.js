@@ -244,7 +244,7 @@ FEDERATION_SERVER="https://esb.kuknos.ir/api/directory/federation"
     it("succeeds for a valid Stellar address", function(done) {
       this.axiosMock
         .expects("get")
-        .withArgs(sinon.match("https://kuknos.ir/kuknos.toml"))
+        .withArgs(sinon.match("https://esb.kuknos.ir/api/directory/federation/?type=name&q=masoud%2Akuknos.ir"))
         .returns(
           Promise.resolve({
             data: `

@@ -196,7 +196,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         (federationServer) => {
           expect(federationServer.serverURL.protocol()).equals("https");
           expect(federationServer.serverURL.hostname()).equals(
-            "api.stellar.org",
+            "esb.kuknos.ir",
           );
           expect(federationServer.serverURL.path()).equals("/federation");
           expect(federationServer.domain).equals("acme.com");

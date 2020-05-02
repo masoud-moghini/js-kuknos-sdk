@@ -4,7 +4,7 @@ describe("federation-server.js tests", function() {
   beforeEach(function() {
     this.server = new StellarSdk.FederationServer(
       "https://acme.com:1337/federation",
-      "kuknos.org",
+      "kuknos.ir",
     );
     this.axiosMock = sinon.mock(axios);
     StellarSdk.Config.setDefault();
@@ -21,7 +21,7 @@ describe("federation-server.js tests", function() {
         () =>
           new StellarSdk.FederationServer(
             "http://acme.com:1337/federation",
-            "kuknos.org",
+            "kuknos.ir",
           ),
       ).to.throw(/Cannot connect to insecure federation server/);
     });
@@ -31,7 +31,7 @@ describe("federation-server.js tests", function() {
         () =>
           new StellarSdk.FederationServer(
             "http://acme.com:1337/federation",
-            "kuknos.org",
+            "kuknos.ir",
             { allowHttp: true },
           ),
       ).to.not.throw();
@@ -43,7 +43,7 @@ describe("federation-server.js tests", function() {
         () =>
           new StellarSdk.FederationServer(
             "http://acme.com:1337/federation",
-            "kuknos.org",
+            "kuknos.ir",
             { allowHttp: true },
           ),
       ).to.not.throw();
@@ -56,7 +56,7 @@ describe("federation-server.js tests", function() {
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.org",
+            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.ir",
           ),
         )
         .returns(
@@ -259,7 +259,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://esb.kuknos.ir/api/directory/federation/?type=name&q=masoud%2Akuknos.org",
+            "https://esb.kuknos.ir/api/directory/federation/?type=name&q=masoud%2Akuknos.ir",
           ),
         )
         .returns(
@@ -296,7 +296,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.org",
+            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.ir",
           ),
         )
         .returns(
@@ -333,7 +333,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .listen(4444, () => {
           new StellarSdk.FederationServer(
             "http://localhost:4444/federation",
-            "kuknos.org",
+            "kuknos.ir",
             { allowHttp: true },
           )
             .resolveAddress("masoud*kuknos.ir")
@@ -375,7 +375,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           .listen(4444, () => {
             new StellarSdk.FederationServer(
               "http://localhost:4444/federation",
-              "kuknos.org",
+              "kuknos.ir",
               opts,
             )
               .resolveAddress("masoud*kuknos.ir")
@@ -397,7 +397,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           .listen(4444, () => {
             new StellarSdk.FederationServer(
               "http://localhost:4444/federation",
-              "kuknos.org",
+              "kuknos.ir",
               opts,
             )
               .resolveAccountId(
@@ -421,7 +421,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           .listen(4444, () => {
             new StellarSdk.FederationServer(
               "http://localhost:4444/federation",
-              "kuknos.org",
+              "kuknos.ir",
               opts,
             )
               .resolveTransactionId(

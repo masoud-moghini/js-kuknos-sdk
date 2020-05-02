@@ -62,7 +62,7 @@ describe("federation-server.js tests", function() {
         .returns(
           Promise.resolve({
             data: {
-              stellar_address: "masoud*kuknos.org",
+              stellar_address: "masoud*kuknos.ir",
               account_id:
                 "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
             },
@@ -72,9 +72,9 @@ describe("federation-server.js tests", function() {
 
     it("requests is correct", function(done) {
       this.server
-        .resolveAddress("masoud*kuknos.org")
+        .resolveAddress("masoud*kuknos.ir")
         .then((response) => {
-          expect(response.stellar_address).equals("masoud*kuknos.org");
+          expect(response.stellar_address).equals("masoud*kuknos.ir");
           expect(response.account_id).equals(
             "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
@@ -87,9 +87,9 @@ describe("federation-server.js tests", function() {
 
     it("requests is correct for username as stellar address", function(done) {
       this.server
-        .resolveAddress("masoud*kuknos.org")
+        .resolveAddress("masoud*kuknos.ir")
         .then((response) => {
-          expect(response.stellar_address).equals("masoud*kuknos.org");
+          expect(response.stellar_address).equals("masoud*kuknos.ir");
           expect(response.account_id).equals(
             "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
@@ -113,7 +113,7 @@ describe("federation-server.js tests", function() {
         .returns(
           Promise.resolve({
             data: {
-              stellar_address: "masoud*kuknos.org",
+              stellar_address: "masoud*kuknos.ir",
               account_id:
                 "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
             },
@@ -127,7 +127,7 @@ describe("federation-server.js tests", function() {
           "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
         )
         .then((response) => {
-          expect(response.stellar_address).equals("masoud*kuknos.org");
+          expect(response.stellar_address).equals("masoud*kuknos.ir");
           expect(response.account_id).equals(
             "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
@@ -151,7 +151,7 @@ describe("federation-server.js tests", function() {
         .returns(
           Promise.resolve({
             data: {
-              stellar_address: "masoud*kuknos.org",
+              stellar_address: "masoud*kuknos.ir",
               account_id:
                 "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
             },
@@ -165,7 +165,7 @@ describe("federation-server.js tests", function() {
           "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
         )
         .then((response) => {
-          expect(response.stellar_address).equals("masoud*kuknos.org");
+          expect(response.stellar_address).equals("masoud*kuknos.ir");
           expect(response.account_id).equals(
             "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           );
@@ -265,7 +265,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .returns(
           Promise.resolve({
             data: {
-              stellar_address: "masoud*kuknos.org",
+              stellar_address: "masoud*kuknos.ir",
               account_id:
                 "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
               memo_type: "id",
@@ -274,9 +274,9 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
           }),
         );
 
-      StellarSdk.FederationServer.resolve("masoud*kuknos.org")
+      StellarSdk.FederationServer.resolve("masoud*kuknos.ir")
         .should.eventually.deep.equal({
-          stellar_address: "masoud*kuknos.org",
+          stellar_address: "masoud*kuknos.ir",
           account_id:
             "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           memo_type: "id",
@@ -286,7 +286,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
     });
 
     it("fails for invalid Stellar address", function(done) {
-      StellarSdk.FederationServer.resolve("masoud*kuknos.org*test")
+      StellarSdk.FederationServer.resolve("masoud*kuknos.ir*test")
         .should.be.rejectedWith(/Invalid Stellar address/)
         .notify(done);
     });
@@ -302,7 +302,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         .returns(
           Promise.resolve({
             data: {
-              stellar_address: "masoud*kuknos.org",
+              stellar_address: "masoud*kuknos.ir",
               account_id:
                 "GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
               memo_type: "id",
@@ -312,7 +312,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
         );
 
       this.server
-        .resolveAddress("masoud*kuknos.org")
+        .resolveAddress("masoud*kuknos.ir")
         .should.be.rejectedWith(/memo value should be of type string/)
         .notify(done);
     });
@@ -336,7 +336,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
             "kuknos.org",
             { allowHttp: true },
           )
-            .resolveAddress("masoud*kuknos.org")
+            .resolveAddress("masoud*kuknos.ir")
             .should.be.rejectedWith(
               /federation response exceeds allowed size of [0-9]+/,
             )
@@ -378,7 +378,7 @@ FEDERATION_SERVER="https://api.stellar.org/federation"
               "kuknos.org",
               opts,
             )
-              .resolveAddress("masoud*kuknos.org")
+              .resolveAddress("masoud*kuknos.ir")
               .should.be.rejectedWith(/timeout of 1000ms exceeded/)
               .notify(done)
               .then(() => tempServer.close());

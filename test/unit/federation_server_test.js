@@ -3,7 +3,7 @@ const http = require("http");
 describe("federation-server.js tests", function() {
   beforeEach(function() {
     this.server = new StellarSdk.FederationServer(
-      "https://acme.com:1337/federation",
+      "https://esb.kuknos.ir/api/directory/federation",
       "kuknos.ir",
     );
     this.axiosMock = sinon.mock(axios);
@@ -56,7 +56,7 @@ describe("federation-server.js tests", function() {
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.ir",
+            "https://esb.kuknos.ir/api/directory/federation?type=name&q=masoud%2Akuknos.ir",
           ),
         )
         .returns(
@@ -107,7 +107,7 @@ describe("federation-server.js tests", function() {
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=id&q=GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
+            "https://esb.kuknos.ir/api/directory/federation?type=id&q=GDVFVVDO56NCOBWB4N3YM3FBRENJWIWJ7PKEDGKF6NCAUOO76SD7LEX3",
           ),
         )
         .returns(
@@ -145,7 +145,7 @@ describe("federation-server.js tests", function() {
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=txid&q=3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
+            "https://esb.kuknos.ir/api/directory/federation?type=txid&q=3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
           ),
         )
         .returns(
@@ -296,7 +296,7 @@ FEDERATION_SERVER="https://esb.kuknos.ir/api/directory/federation"
         .expects("get")
         .withArgs(
           sinon.match(
-            "https://acme.com:1337/federation?type=name&q=masoud%2Akuknos.ir",
+            "https://esb.kuknos.ir/api/directory/federation?type=name&q=masoud%2Akuknos.ir",
           ),
         )
         .returns(

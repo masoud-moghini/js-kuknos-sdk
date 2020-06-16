@@ -1,6 +1,6 @@
 {
   "name": "js-kuknos-sdk",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "js-kuknos-sdk is a library for working with the Stellar Horizon server.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

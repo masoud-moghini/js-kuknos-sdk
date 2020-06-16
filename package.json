@@ -116,7 +116,7 @@
     "detect-node": "^2.0.4",
     "es6-promise": "^4.2.4",
     "eventsource": "^1.0.7",
-    "js-kuknos-base": "^0.0.8",
+    "js-kuknos-base": "^0.0.9",
     "lodash": "^4.17.15",
     "randombytes": "^2.1.0",
     "toml": "^2.3.0",

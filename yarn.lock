@@ -4875,10 +4875,10 @@ jest-validate@^23.5.0:
     leven "^2.1.0"
     pretty-format "^23.6.0"
 
-js-kuknos-base@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/js-kuknos-base/-/js-kuknos-base-0.0.8.tgz#5b191c16816d65a2c0a3fe50babc13b97065595c"
-  integrity sha512-vsWU3v9/8gsXvPtbp5nrAgWF8eKyXzoJQx6godnmCcl4hIMlErjCvkUFOfd8vE44F2Y32pM8X0GHGhrZtC5Qbg==
+js-kuknos-base@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/js-kuknos-base/-/js-kuknos-base-0.0.9.tgz#e68748db182f99b0dae4d43ecb42fa77bb266783"
+  integrity sha512-zRRDx5nQs0oADzXtHAxj953riDYU+BMH4OrzzvJEV5QZZuqdvLI7r7ZO2RuvJRTPM/rRAoJwGFiuI7svG7KHqA==
   dependencies:
     babel-preset-es2015 "^6.24.1"
     base32.js "^0.1.0"
@@ -8868,9 +8868,9 @@ xtend@^4.0.0, xtend@~4.0.0, xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
